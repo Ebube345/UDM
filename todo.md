@@ -1,0 +1,3 @@
+ - Empty buffer once connection is establised
+ - Remove localhost from connection list
+ - Detect when a particular interface is down

@@ -1,0 +1,1 @@
+gdb --args bin/addrinfosrv_new 3003 outputs/ebube.jpg
