@@ -10,7 +10,7 @@ typedef short port_t;
 enum error_code { eof = 0, conn_close };
 enum ipv { v4 = 0, v6 };
 enum role { TX = 0, RX };
-#define ALLOC_SIZE 1024
+#define ALLOC_SIZE 49152
 
 class io_context {
  public:

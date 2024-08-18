@@ -19,7 +19,7 @@
 #include "presentation.h"
 #include "stdutils.h"
 
-#define WIN_SIZ 3
+#define WIN_SIZ 5
 namespace Pipeline {
 std::map<uint16_t, memBuff *> rxcurrentWindow;
 std::map<int, memBuff *> txcurrentWindow;
@@ -648,7 +648,6 @@ void submitTask(int nextId, stateDirection dir, struct memBuff *currentBuffer) {
       //_LOG("EXPECTING PAYLOAD");
       std::shared_ptr<struct memBuff> buf = std::make_unique<struct memBuff>();
       struct memBuff *currentBuff = buf.get();
-      _LOG(currentBuff->data);
 /*     session->submit([&nextId, &dir, &currentBuff]() { */
       receiveState(nextId, dir, currentBuff);
 /*     }); */

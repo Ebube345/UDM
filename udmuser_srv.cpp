@@ -40,6 +40,7 @@ int main(int argc, char* argv[]) {
         }
         udm::source file(filename, sourceMode::IN);
         size_t filesize = std::filesystem::file_size(filename);
+        _LOG(filesize);
         udm::buffer data(io_context);
         if (filesize > 0) {
           data.set_source(file);

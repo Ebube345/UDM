@@ -10,7 +10,7 @@
 #include "circular_pipeline.hpp"
 #include "stdutils.h"
 #define HEADER_SPACE sizeof(capsuleHdr)
-#define CHUNK 1024
+#define CHUNK 49152
 
 enum class sourceMode { IN = 0x8, OUT = 0x10 };
 enum class capsuleType { CTRL = 0b00, PIGGY = 0b01, INQ = 0b10, PAYLD = 0b11 };
@@ -87,7 +87,7 @@ class DataSource {
   sourceMode fmode;
   std::fstream fs;
   FILE *fptr;
-  size_t fileSize = 0;
+  unsigned long long int fileSize = 0;
   void readFile();
   explicit DataSource(char *fname, sourceMode mode) : fmode(mode) {
     switch (mode) {

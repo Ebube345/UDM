@@ -174,7 +174,6 @@ public:
   }
   struct memBuff *pull() {
     struct memBuff *emptyChunk = rxFactory->makeChunkforRx(rxFactory);
-    _LOG(emptyChunk->data);
     //std::lock_guard<std::mutex> chunk_lock(memBuff_mtx);
     if(!emptyChunk->data) std::cin.get();
     ssize_t nread = -1;
@@ -188,6 +187,7 @@ public:
     }
     emptyChunk->size = nread;
     processor->stripHeader(emptyChunk->data.get());
+    _LOG(emptyChunk->data->header.capid);
     //fprintf(stdout, "[%d] -> read %zd bytes \n", counter, nread);
     counter++;
     return emptyChunk;
