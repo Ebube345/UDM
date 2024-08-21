@@ -4,8 +4,6 @@ This branch uses asio networking library to make the project cross compatible
 follow these steps to build on a local machine:
 * [Download Asio](https://think-async.com/Asio/Download.html) dependency and copy to the external folder (create the external folder if it does not exist)
 * rename the asio-* to asio-latest (e.g from asio-1.28.0/ to asio-latest/)
-* create a build/ directory in the source directory and run ```bash
-cd build && cmake ..
-make -j
-```
-*. All the executable binaries would be in the bin/ folder
+* create a build/ directory in the source directory and run
+ ```cd build && cmake ..;cmake --build .  ``` or use the build tool directly e.g ``` make -j ```
+* All the executable binaries would be in the bin/ folder
