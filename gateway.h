@@ -5,6 +5,12 @@
 #include "datafactory.h"
 #include "interfaces.h"
 #include "stdutils.h"
+#include <arpa/inet.h>
+#include <linux/if.h>
+#include <netdb.h>
+#include <sys/ioctl.h>
+#include <sys/socket.h>
+#include <unistd.h>
 #include <cassert>
 #include <cstdlib>
 #include <map>

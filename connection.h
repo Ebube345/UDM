@@ -1,6 +1,14 @@
 #ifndef CONNECTION_H
 #define CONNECTION_H
-#include "asio.hpp"
+#include <arpa/inet.h>
+#include <cstring>
+#include <netdb.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/socket.h>
+#include <sys/types.h>
+#include <unistd.h>
 /* Obtain address(es) matching host/port. */
 
 void obtainAddresses(char *ip_addr, char *port, struct addrinfo *hints,

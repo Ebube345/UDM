@@ -1,6 +1,8 @@
 #ifndef SESSION_H
 #define SESSION_H
 
+#include <netdb.h>
+
 #include <atomic>
 #include <cassert>
 #include <cstdint>
@@ -17,7 +19,7 @@
 #include "presentation.h"
 #include "stdutils.h"
 
-#define WIN_SIZ 3
+#define WIN_SIZ 5
 namespace Pipeline {
 std::map<uint16_t, memBuff *> rxcurrentWindow;
 std::map<int, memBuff *> txcurrentWindow;
