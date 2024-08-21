@@ -4,3 +4,7 @@ routputs/
 dungeon/
 *.o
 *.jpg
+build/
+external/asio-latest/
+.cache/
+compile_commands.json
