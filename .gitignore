@@ -2,5 +2,9 @@ bin/
 outputs/
 routputs/
 dungeon/
+build/
+external/asio-latest/
+.cache/
+compile_commands.json
 *.o
 *.jpg
